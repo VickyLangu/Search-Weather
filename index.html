@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="search">
+          <div>
+            <input
+              type="search"
+              id="searchExample"
+              aria-describedby="search"
+              placeholder="Search your city"
+              class="form-control"
+            />
+          </div>
+          <div>
+            <button type="submit" id="Search-button">Search</button>
+            <button id="current-location">current</button>
+          </div>
+        </div>
+        <div class="container text-left">
+          <div class="row">
+            <div class="col-6">
+              <h1><strong id="city-name"> Johannesburg</strong></h1>
+              <span id="weather-description"> Mostly Sunny</span>
+              <br />
+              <span class="degrees" id="temperature">18°</span>
+            </div>
+
+            <div class="col-6 d-flex justify-content-end">
+              <div class="col-12">
+                <div class="alignment">
+                  Precipitation: <span id="precipitation">0% </span> <br />
+                  Humadity:<span id="humidity">37%</span> <br />
+                  Wind: <span id="wind">10 km/h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <div class="weekly-weather">
+          <div class="borders">
+            <div class="weather-row row">
+              <div class="col">
+                ☀️ <br />
+                Mon <br />
+                18°/6°
+              </div>
+              <div class="col">
+                ☀️ <br />
+                Tue <br />
+                18°/4°
+              </div>
+              <div class="col">
+                ☀️ <br />
+                Wed <br />
+                18°/4°
+              </div>
+              <div class="col">
+                ☀️ <br />
+                Thu <br />
+                18°/4°
+              </div>
+              <div class="col">
+                ☀️ <br />
+                Fri <br />
+                18°/5°
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
