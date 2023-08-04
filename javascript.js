@@ -13,7 +13,7 @@ function getWeatherData(cityName, apiKey, callback) {
   function handleResponse(response) {
     let weatherData = {
       cityName: cityName,
-      temperature: response.data.main.temp,
+      temperature: Math.round(response.data.main.temp),
       wind: response.data.wind.speed,
       precipitation: response.data.rain
         ? response.data.rain["1h"] || "0mm"
@@ -43,7 +43,7 @@ function getWeatherData(cityName, apiKey, callback) {
 
 function updateWeatherUI(weatherData) {
   cityNameElement.textContent = weatherData.cityName;
-  temperatureElement.textContent = `${weatherData.temperature}°C`;
+  temperatureElement.textContent = `${Math.round(weatherData.temperature)}°C`;
   windElement.textContent = `${weatherData.wind} km/h`;
   weatherDescriptionElement.textContent = weatherData.description;
   precipitationElement.textContent = weatherData.precipitation;
@@ -95,9 +95,9 @@ function updateWeeklyWeatherUI(weatherDataList) {
       weekday: "short",
     });
     let iconCode = dailyWeatherData[day].weather[0].icon;
-    let temperature = dailyWeatherData[day].main.temp.toFixed(0);
-    let minTemp = dailyWeatherData[day].main.temp_min.toFixed(0);
-    let maxTemp = dailyWeatherData[day].main.temp_max.toFixed(0);
+    let temperature = Math.round(dailyWeatherData[day].main.temp);
+    let minTemp = Math.round(dailyWeatherData[day].main.temp_min);
+    let maxTemp = Math.round(dailyWeatherData[day].main.temp_max);
 
     let weatherItem = document.createElement("div");
     weatherItem.className = "col";
