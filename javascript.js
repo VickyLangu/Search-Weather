@@ -142,3 +142,15 @@ function getWeather(event) {
 }
 
 searchButton.addEventListener("click", getWeather);
+
+// .today-temperature {
+//   font-size: 30px;
+//   color: rgb(15, 15, 15);
+//   font-weight: bold;
+// }
+
+// .weekly-temperature {
+//   color: rgb(226, 42, 42);
+//   font-size: 25px;
+//   font-weight: bold;
+// }
